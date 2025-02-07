@@ -14,15 +14,17 @@ Modifications to disable throttling had no impact on Exchange Server 2019 when a
 We tried disabling the throttling by editing the aforementioned file and adding or modifying the following lines (if already present):
 
 - First, we tried to disable throttling (a restart of MS Exchange Transport services is necessary for the settings to be updated in memory and applied to mail flow processing):
+
   ```xml
   add key="MailboxDeliveryThrottlingEnabled" value="False"
   ```
 
 - Then, we tried these two settings as well in addition to the above (each time we modified the .exe.config file, a restart of MS Exchange Transport services was necessary):
-```xml
-add key="RecipientThreadLimit" value="2"
-add key="MaxMailboxDeliveryPerMdbConnections" value="3"
-```
+
+  ```xml
+  add key="RecipientThreadLimit" value="2"
+  add key="MaxMailboxDeliveryPerMdbConnections" value="3"
+  ```
 
 ## Resolution (more a workaround)
 
