@@ -26,6 +26,8 @@ We tried disabling the throttling by editing the aforementioned file and adding 
   add key="MaxMailboxDeliveryPerMdbConnections" value="3"
   ```
 
+But the above did not have any effect on our Exchange 2019 servers. Microsoft Support then asked us to run the below commands (you can revert the changed when the issue is gone, or if the below pin your CPU to 100%)
+
 ## Resolution (more a workaround)
 
 A couple of PowerShell commands to help removing Database or mail flow throttling on OnPrem servers (Exchange 2019, applicable to Exchange 2016)
