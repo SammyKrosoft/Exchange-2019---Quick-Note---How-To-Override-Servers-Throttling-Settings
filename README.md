@@ -30,7 +30,11 @@ But the above did not have any effect on our Exchange 2019 servers. Microsoft Su
 
 ## Resolution (more a workaround)
 
-A couple of PowerShell commands to help removing Database or mail flow throttling on OnPrem servers (Exchange 2019, applicable to Exchange 2016)
+Here are a couple of PowerShell commands to help removing Database or mail flow throttling on OnPrem servers (Exchange 2019, applicable to Exchange 2016) in the following conditions:
+
+- your CPU utilization is **not** pinned to 80%-100%
+- your have sufficient free RAM
+- your disk latency is below 50 milliseconds for your databases disks, and below 20 milliseconds for your log disks (check the `Logical disk \ Avg Disk sec/read` and `\Avg Disk sec/write` performance counters for your database disks as well as your log disks if these are on separate disks)
 
 > NOTE: We can remove temporarily the database throttling because we had 20% CPU utilization max, and more than 1GB memory free. Do NOT do this if your CPU is already pinned at 100% ! Continue the investigation, or offload the server from mailboxes (failover some databases to remove some load), or add CPU/RAM resources if you have virtual servers.
 
