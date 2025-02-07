@@ -19,12 +19,21 @@ We tried disabling the throttling by editing the aforementioned file and adding 
   add key="MailboxDeliveryThrottlingEnabled" value="False"
   ```
 
+> Note: You can restart the Exchange transport services using the Services window (for example, you can launch it by using Windows + R then type `services.msc`), or using the following PowerShell command:
+> 
+> ```powershell
+> Restart-Service MSExchangeTransport # on ALL SERVERS
+> ```
+
 - Then, we tried these two settings as well in addition to the above (each time we modified the .exe.config file, a restart of MS Exchange Transport services was necessary):
 
   ```xml
   add key="RecipientThreadLimit" value="2"
   add key="MaxMailboxDeliveryPerMdbConnections" value="3"
   ```
+
+See the above note for options to restart your Transport service on OnPrem Exchange server(s).
+
 
 But the above did not have any effect on our Exchange 2019 servers. Microsoft Support then asked us to run the below commands (you can revert the changed when the issue is gone, or if the below pin your CPU to 100%)
 
