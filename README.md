@@ -24,7 +24,11 @@ add key="RecipientThreadLimit" value="2"
 add key="MaxMailboxDeliveryPerMdbConnections" value="3"
 ```
 
+## Resolution (more a workaround)
+
 A couple of PowerShell commands to help removing Database or mail flow throttling on OnPrem servers (Exchange 2019, applicable to Exchange 2016)
+
+> NOTE: We can remove temporarily the database throttling because we had 20% CPU utilization max, and more than 1GB memory free. Do NOT do this if your CPU is already pinned at 100% ! Continue the investigation, or offload the server from mailboxes (failover some databases to remove some load), or add CPU/RAM resources if you have virtual servers.
 
 ```powershell
 
