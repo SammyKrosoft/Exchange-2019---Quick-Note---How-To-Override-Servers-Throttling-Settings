@@ -1,4 +1,4 @@
-# Exchange-2019 Quick-Note: How To Override Servers Throttling Settings
+# Exchange-2019 Quick-Note: How To and Why Override Servers Throttling Settings
 
 ## Issue
 
