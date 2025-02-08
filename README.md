@@ -1,6 +1,6 @@
 # Exchange-2019 Quick-Note: How To and Why Override Servers Throttling Settings
 
-*DISCLAIMER: Overriding server database throttling should only be a temporary solution to database throttling issues. Also, it should be use only if your server has resources to take the charge of additional load (CPU not beyond 70% in average, at least 1GB of available RAM, no Disk latency). It is strongly recommended to work with Microsoft Support to identify the cause of the databsae throttling in the first place.*
+*DISCLAIMER: Overriding server database throttling should only be considered a temporary solution for database throttling issues and is preferable for known high-load scenarios (e.g., temporary bursts of mailbox activities or mass emailing to all users). Additionally, this action should only be taken if your server has the resources to handle the additional load (e.g., CPU usage not exceeding 70% on average, at least 1GB of available RAM, and no disk latency). It is strongly recommended to work with Microsoft Support to identify the root cause of the database throttling.*
 
 ## Issue
 
